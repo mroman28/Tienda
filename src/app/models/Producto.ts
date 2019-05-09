@@ -14,7 +14,7 @@ export class Producto{
   }
 
   get disponible(): number {
-    return this._unidadesDisponibles;
+    return this._disponible;
   }
 
   get imagen(): string {
@@ -22,6 +22,6 @@ export class Producto{
   }
 
   set disponible(value: number) {
-    this._disponibles = value;
+    this._disponible = value;
   }
 }
