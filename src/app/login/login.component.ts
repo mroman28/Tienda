@@ -20,11 +20,12 @@ export class LoginComponent implements OnInit {
       (data: Response) =>{
         var usuarios = JSON.parse(JSON.stringify(data));
         var validacion = false;
-        usuarios.forEach((usr) => {
-          if(usr.user === usuario && usr.password === password) {
+       // usuarios.forEach((usr) => {
+          if(usuario.user === usuario && usuarios.password === password) {
             validacion = true;
           }
-        });
+       // })
+    ;
         validacion ? this.router.navigate(['principal']) : alert('Credenciales inválidas');
       }
     )
